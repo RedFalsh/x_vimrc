@@ -21,7 +21,8 @@ git下载：
 ## Linux：
 
 1、复制autoload文件夹下面的plug.vim到 `~/.vim/autoload/`文件夹下面
-
+`mkdir -p ~/.vim/autoload/`
+`mkdir -p ~/.vim/bundle/`
 `cp autoload/plug.vim ~/.vim/autoload/plug.vim`
 
 2、复制`vimrc`文件内容到`~/.vimrc`
