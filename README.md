@@ -1,6 +1,11 @@
 # x_vimrc
 我的vimrc配置文件
 
+# 下载：
+
+git下载：
+`git clone https://github.com/RedFalsh/x_vimrc.git`
+
 # 使用方法：
 
 ## Windows：
@@ -28,3 +33,5 @@
 `cp vimrc.bundles ~/.vimrc.bundles`
 
 4、打开vim，输入命令：`:PlugInstall`开始安装插件
+
+
