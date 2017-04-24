@@ -196,8 +196,8 @@ call plug#end()
         \ 'gitcommit' : 1,
         \}
 	
-	let g:ycm_python_binary_path = 'C:\Python27\python'
-	let g:ycm_python_binary_path = 'python'
+	let g:ycm_python_binary_path = '/usr/bin/python'
+	let g:ycm_python_binary_path = 'python3'
 " }}}
 
 

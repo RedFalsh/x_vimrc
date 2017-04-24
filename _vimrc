@@ -108,6 +108,16 @@ set t_ti= t_te=
 " Hide the mouse cursor while typing
 " set mousehide
 
+"启动gui程序时去掉部分功能
+if has("gui_running")
+	set guioptions-=m "remove menu bar
+	set guioptions-=Y "remove toolbar
+	set guioptions-=T "remove toolbar
+	set guioptions-=r "remove right-hand scroll bar
+	set guioptions-=L "remove left-hand scroll bar
+	set guioptions-=b "remove bottom-hand scroll bar
+	set showtabline=0 "remove bottom-hand scroll bar
+endif
 
 " 修复ctrl+m 多光标操作选择的bug，但是改变了ctrl+v进行字符选中时将包含光标下的字符
 set selection=inclusive
@@ -641,24 +651,6 @@ endif
 "==========================================
 " Theme Settings  主题设置
 "==========================================
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guifont=Monaco:h14
-    if has("gui_gtk2")   "GTK2
-        set guifont=Monaco\ 12,Monospace\ 12
-    endif
-    set guioptions-=T
-    set guioptions+=e
-    set guioptions-=r
-    set guioptions-=L
-    set guitablabel=%M\ %t
-    set showtabline=1
-    set linespace=2
-    set noimd
-    set t_Co=256
-endif
-
 
 
 " theme主题
