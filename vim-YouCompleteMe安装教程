@@ -1,0 +1,16 @@
+
+git clone https://github.com/Valloric/YouCompleteMe.git
+
+git submodule update --init --recursive
+
+cmake -G "MinGW Makefiles" . C:\Users\Administrator\vimfiles\bundle\YouCompleteMe\third_party\ycmd\cpp
+
+cd C:\Users\Administrator\vimfiles\bundle\YouCompleteMe\build
+
+C:\CMake\bin\cmake.exe -G "MinGW Makefiles" . C:\Users\Administrator\vimfiles\bundle\YouCompleteMe\third_party\ycmd\cpp
+
+C:\mingw-w64\mingw64\bin\mingw32-make.exe ycm_core
+
+´Ó ycm\¸´ÖÆ ycm_core.pyd µ½ %USERPROFILE%\vimfiles\bundle\YouCompleteMe\python
+
+cmake -G "MinGW Makefiles" . %USERPROFILE%\vimfiles\bundle\YouCompleteMe\third_party\ycmd\cpp
