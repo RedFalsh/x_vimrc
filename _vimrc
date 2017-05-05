@@ -523,7 +523,7 @@ map Y y$
 " 复制选中区到系统剪切板中
 vnoremap <leader>y "+y
 "粘贴系统剪切板中内容到gvim中
-map <leader>p "+p
+map <leader><leader>y "+p
 " auto jump to end of select
 " vnoremap <silent> y y`]
 " vnoremap <silent> p p`]
@@ -653,7 +653,8 @@ endif
 " Theme Settings  主题设置
 "==========================================
 
-
+"设置字体
+set guifont=Monospace\ 12
 " theme主题
 set background=dark
 set t_Co=256
