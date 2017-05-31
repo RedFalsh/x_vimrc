@@ -399,6 +399,43 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+map <leader>= :resize +3<CR>
+map <leader>- :resize -3<CR>
+map <leader>[ :vertical resize -3<CR>
+map <leader>] :vertical resize +3<CR>
+map <leader><leader>= :resize +6<CR>
+map <leader><leader>- :resize -6<CR>
+map <leader><leader>[ :vertical resize -6<CR>
+map <leader><leader>] :vertical resize +6<CR>
+
+"Toggle Menu and Toolbar
+set guioptions-=m
+set guioptions-=T
+map <silent> <F11> :if &guioptions =~# 'T' <Bar>
+        \set guioptions-=T <Bar>
+        \set guioptions-=m <bar>
+    \else <Bar>
+        \set guioptions+=T <Bar>
+        \set guioptions+=m <Bar>
+    \endif<CR>
+"默认进入最大化
+"windows
+"au GUIEnter * simalt ~x
+"linux----->
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window (for an alternative on Windows, see simalt below).
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
+
 
 " http://stackoverflow.com/questions/13194428/is-better-way-to-zoom-windows-in-vim-than-zoomwin
 " Zoom / Restore window.
@@ -659,8 +696,8 @@ set guifont=Monospace\ 12
 set background=dark
 set t_Co=256
 
-colorscheme solarized
-" colorscheme molokai
+" colorscheme solarized
+colorscheme molokai
 " colorscheme desert
 
 
@@ -678,3 +715,23 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+
+
+
+" 附加功能
+
+" 插入时间
+inoremap <leader>dt <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
