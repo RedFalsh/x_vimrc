@@ -40,14 +40,16 @@ git下载：
 
 
 * python高亮设置 --self高亮设置
-安装完插件pyhton-syntax后，找此插件文件目录，修改文件夹下python.vim文件,windows路径`C:\Users\Administrator\.vim\bundle\python-syntax\syntax\python.vim`
+安装完插件pyhton-syntax后，找此插件文件目录，修改文件夹下python.vim文件
+
+windows路径:`C:\Users\Administrator\.vim\bundle\python-syntax\syntax\python.vim`
 
 如下：`self`颜色设置跟`import`一样
-`
+```
 syn keyword pythonInclude       import
 syn keyword pythonImport        import self
 syn keyword pythonException     try except finally
 syn keyword pythonOperator      and in is not or
-`
+```
 
 
