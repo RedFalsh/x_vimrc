@@ -90,10 +90,11 @@ NOT using libclang, no semantic completion for C/C++/ObjC will be available
 [100%] Linking CXX shared library C:\Users\admin\.vim\bundle\YouCompleteMe\third_party\ycmd\ycm_core.pyd
 [100%] Built target ycm_core
 ```
+编译完成后将`C:\Users\admin\.vim\bundle\YouCompleteMe\third_party\ycmd\ycm_core.pyd`复制到`C:/Users/admin/.vim/bundle/YouCompleteMe/python/`文件夹下面
 
 如果编译出错，根据错误信息，进行修改源程序即可，就是cpp文件夹下面的一些.c文件
 
-5.编译完成后里面要设置下面两个才能使用
+5.编译完成后里面要设置下面两个才能使用,这里非常重要，不设置的话，用不了！！！
 
 ```
 " 打开后台Python2支持的自动补全服务
