@@ -41,10 +41,15 @@ git下载：
 ## Windows安装会出现的问题
 
 1.新建build文件夹
+
 2.打开命令窗口，进入上一步的build文件夹
+
 3.执行命令，用cmake编译YouCompleteMe插件下的第三方程序(因为Program Files中间有空格,所以用双引号调用cmake.exe程序)
+
 `"C:\Program Files\CMake\bin\cmake.exe" -G "MinGW Makefiles" . C:\Users\admin\.vim\bundle\YouCompleteMe\third_party\ycmd\cpp`
+
 会得到如下结果:
+
 ```
 min\.vim\bundle\YouCompleteMe\third_party\ycmd\cpp
 -- The C compiler identification is GNU 6.3.0
@@ -67,9 +72,13 @@ NOT using libclang, no semantic completion for C/C++/ObjC will be available
 -- Generating done
 -- Build files have been written to: C:/Users/admin/.vim/bundle/YouCompleteMe/build
 ```
+
 4.执行命令，用cmake编译生成ycm_core(因为Program Files中间有空格,所以用双引号调用cmake.exe程序)
+
 `C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev2\mingw64\bin\mingw32-make.exe ycm_core`
+
 得到如下结果:
+
 ```
 [ 89%] Building CXX object ycm/CMakeFiles/ycm_core.dir/LetterNode.cpp.obj
 [ 91%] Building CXX object ycm/CMakeFiles/ycm_core.dir/LetterNodeListMap.cpp.obj
@@ -81,9 +90,11 @@ NOT using libclang, no semantic completion for C/C++/ObjC will be available
 [100%] Linking CXX shared library C:\Users\admin\.vim\bundle\YouCompleteMe\third_party\ycmd\ycm_core.pyd
 [100%] Built target ycm_core
 ```
+
 如果编译出错，根据错误信息，进行修改源程序即可，就是cpp文件夹下面的一些.c文件
 
 5.编译完成后里面要设置下面两个才能使用
+
 ```
 " 打开后台Python2支持的自动补全服务
 let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
@@ -92,6 +103,7 @@ let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
 ```
 
 完整设置YouCompleteMe如下:
+
 ```
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
