@@ -97,9 +97,9 @@ NOT using libclang, no semantic completion for C/C++/ObjC will be available
 5.编译完成后里面要设置下面两个才能使用,这里非常重要，不设置的话，用不了！！！
 
 ```
-" 打开后台Python2支持的自动补全服务
+" 打开后台Python2支持的自动补全服务，这个只有python2支持
 let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
-" 添加Python2二进制运行程序
+" 添加编写程序用的Python语言版本二进制运行程序
 let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
 ```
 
@@ -109,10 +109,6 @@ let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
     " let g:ycm_server_python_interpreter = 'C:\\Python35\\python3.exe'
-    let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
-    " let g:ycm_python_binary_path = 'python.exe'
-    let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
-    " let g:ycm_python_binary_path = 'C:\\Python35\\python3.exe'
     "let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
     "let g:ycm_key_list_previous_completion=['<c-p>']
@@ -150,7 +146,10 @@ let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
         \ 'tagbar' : 1,
         \ 'gitcommit' : 1,
         \}
-    let g:ycm_python_binary_path = 'C:/Python35/python3'
+    " 设置python27自动补全server路径
+    let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
+    " 设置python3为当前代码运行调试环境，下面两个随便用一种都可以
+    let g:ycm_python_binary_path = 'C:/Python35/python3'
     let g:ycm_python_binary_path = 'python3'
 " }}}
 
