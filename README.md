@@ -166,8 +166,8 @@ let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
 windows路径:`C:\Users\Administrator\.vim\bundle\python-syntax\syntax\python.vim`
 
 如下：`self`颜色设置跟`import`一样
-```
-syn keyword pythonInclude       import
+```vim
+syn keyword pythonInclude       import
 syn keyword pythonImport        import self
 syn keyword pythonException     try except finally
 syn keyword pythonOperator      and in is not or
