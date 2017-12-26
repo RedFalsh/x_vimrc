@@ -96,16 +96,18 @@ NOT using libclang, no semantic completion for C/C++/ObjC will be available
 
 5.编译完成后里面要设置下面两个才能使用,这里非常重要，不设置的话，用不了！！！
 
-```
+```vim
 " 打开后台Python2支持的自动补全服务，这个只有python2支持
 let g:ycm_server_python_interpreter = 'C:\\Python27\\python2.exe'
-" 添加编写程序用的Python语言版本二进制运行程序
-let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
+" 添加编写程序用的Python语言版本二进制运行程序，一般现在用python3
+或let g:ycm_python_binary_path = 'C:/Python35/python3'
+或let g:ycm_python_binary_path = 'python3'
+"let g:ycm_python_binary_path = 'C:\\Python27\\python2.exe'
 ```
 
 完整设置YouCompleteMe如下:
 
-```
+```vim
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
     " let g:ycm_server_python_interpreter = 'C:\\Python35\\python3.exe'
